@@ -43,7 +43,7 @@ p{
     font-family: var(--ff-body);
 }
 body{
-    background-image:  url(/img/body.jpg);
+    background-image:  url(./img/body.jpg);
     background-color: var(--clr-v-dark);
     background-position: center; 
     background-repeat: no-repeat;
