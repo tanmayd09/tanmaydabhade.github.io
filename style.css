@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+:root{
+     --ff-body: 'Comfortaa', cursive;;
+    --ff-logo: 'Dancing Script', cursive;; 
+
+    --fw-regular: 300;
+    --fw-semi-bold: 700;
+    --fw-bold: 900;
+
+    --clr-v-light: #66FCF1;
+    --clr-light: #C5C6C7;
+    --clr-accent: #45a29e;
+    --clr-dark: #1f28334d;
+    --clr-v-dark : #0B0C10;
+
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.75rem;
+    --fs-h3: 1rem;
+    --fs-body: 1rem;
+    --bs: 0.25em 0.25em 0.75em rgba(128, 27, 102, 0.293);
+}
+h1{
+    font-size: var(--fs-h1);
+    font-family: var(--ff-body);
+}
+h2{
+    font-size: var(--fs-h2);
+    font-family: var(--ff-body);
+}
+h3{
+    font-size: var(--fs-h3);
+    font-family: var(--ff-body);
+}
+p{
+    font-family: var(--ff-body);
+}
+body{
+    background-image:  url(/img/body.jpg);
+    background-color: var(--clr-v-dark);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    width: 35%;
+}
+.logo h1{
+    font-family: var(--ff-logo);
+    margin-left: 1em;
+}
+.logo h1 a{
+    text-decoration: none;
+    color: var(--clr-light);
+}
+.logo h2{
+    font-family: var(--ff-body);
+    
+}
+.logo h2 a{
+    text-decoration: none;
+    color: var(--clr-light);
+    margin-left: 0.3em;
+}
+.logo h3{
+    font-family: var(--ff-body);
+    color: var(--clr-light);
+    margin-left: 1.25em;
+}
+.logo h3 a:hover{
+    color: var(--clr-accent);
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: var(--clr-dark);
+    animation: slideUp .8s ease;
+}
+.navbar{
+    display: flex;
+    list-style-type: none;
+    width: 20%;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: var(--ff-body);
+}
+.navbar li a:hover{
+    color: var(--clr-accent);
+}
+li{
+    color: var(--clr-light);
+}
+li a {
+    text-decoration: none;
+    color: var(--clr-v-light);
+}
+.container{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .8s ease;
+}
+.center-img{
+    width: 50%;
+    text-align: center;
+    margin: 0px 0px 0px 70px;
+}
+.center-img img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    animation: fade-right 1.5s ease-in-out ;
+}
+.center-text{
+    width: 50%;
+    color: var(--clr-light);
+}
+.center-text h1{
+    font-size: 100px;
+    animation: slideIn 1.5s ease-in-out ;
+}
+.center-text h3{
+    font-size: 22px;
+    margin: 30px 100px 20px 0px;
+    animation: slideIn 1.5s ease-in-out ;
+}
+.center-text p{
+    font-size: 12x;
+    line-height: 150%;
+    margin: 30px 100px 0px 0px;
+    animation: slideIn 1.5s ease-in-out ;
+}
+.buttons{
+    display: flex;
+    cursor: pointer;
+    animation: slideIn 1.5s ease-in-out ;
+}
+.buttons p a{ 
+    color: var(--clr-accent);
+    text-decoration: none;
+    border: 2px solid var(--clr-light);
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.2s ease-in;
+}
+.buttons p :hover{
+    color: var(--clr-v-light);
+    border: 2px solid var(--clr-v-light);
+}
+
+.footer{
+    height: 30vh;
+    color: var(--clr-v-light);
+    background-color: var(--clr-dark);
+}
+.footer-container{
+    height: 100%;
+    padding: 50px 90px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.3em;
+    animation: fade 1.5s ease-in-out ;
+}
+.email a, .phone a{
+    color: var(--clr-light);
+    text-decoration: none;
+}
+p a i{
+    color: var(--clr-light);
+}
+p a i:hover{
+    color: var(--clr-accent);
+}
+
+.intro{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--clr-v-dark);
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .intro-text{
+     color: var(--clr-light);
+  }
+  .slider{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--clr-accent);
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+  }
+  .hide{
+    background-color: var(--clr-v-dark);
+    overflow: hidden;
+  }
+  .hide span{
+    transform: translateY(100%);
+    display: inline-block;
+  }
+  
+  .reveal{
+    position: relative;
+    /* transform: translateY(100px); */
+    opacity: 0;
+    transition: 750ms all ease;
+  }
+  
+  .reveal.active{
+    /* transform: translateY(0); */
+    opacity: 1;
+  }
+
+
+  :root{
+    --ff-body: 'Comfortaa', cursive;;
+   --ff-logo: 'Dancing Script', cursive;; 
+
+   --fw-regular: 300;
+   --fw-semi-bold: 700;
+   --fw-bold: 900;
+
+   --clr-v-light: #66FCF1;
+   --clr-light: #C5C6C7;
+   --clr-accent: #45a29e;
+   --clr-dark: #1f28334d;
+   --clr-v-dark : #0B0C10;
+
+   --fs-h1: 2.5rem;
+   --fs-h2: 1.75rem;
+   --fs-h3: 1rem;
+   --fs-body: 1rem;
+   --bs: 0.25em 0.25em 0.75em rgba(128, 27, 102, 0.293);
+}
+
+.container1{
+    color: var(--clr-light);
+    margin: 9em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sec{
+    width: 70%;
+}
+.title{
+    height: 10vh;
+    transform: translateX(-420px);
+}
+.sub-title{
+    height: 7vh;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.44);
+}
+.details{
+    display: flex;
+    margin: 2em;
+}
+.date{
+    width: 50%;
+}
+.work-description{
+    width: 50%;
+    line-height: 130%;
+}
+.title-des{
+    transform: translateX(50px);
+}
+.hr{
+    background-color: var(--clr-accent);
+    height: 1px;
+    width: 90%;
+    margin: 2em;
+}
+.last-hr{
+    background-color: var(--clr-accent);
+    height: 1px;
+    width: 90%;
+}
+
+.date h2{
+    line-height: 170%;
+}
+ .date p{
+    line-height: 150%;
+}
+.work-description img{
+    max-width: 80%;
+    transform: translateX(70px);
+}
+.area{
+    height: 70vh;
+    color: var(--clr-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec-area{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.sec-area a{
+    line-height: 200%;
+    font-family: var(--ff-body);
+}
+@media screen and (max-width: 600px) {
+    .footer-container{
+        flex-direction: column;
+        height: 120%;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .container{
+        flex-direction: column;
+        height: 100%;
+    }
+  }
